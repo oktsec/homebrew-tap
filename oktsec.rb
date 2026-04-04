@@ -5,21 +5,21 @@
 class Oktsec < Formula
   desc "Runtime security for AI agents. Intercepts tool calls, scans with 230 rules, tamper-evident audit trail."
   homepage "https://oktsec.com"
-  version "0.13.2"
+  version "0.13.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oktsec/oktsec/releases/download/v0.13.2/oktsec_0.13.2_darwin_amd64.tar.gz"
-      sha256 "f5e51f0f673b84cd0f63e66bbf360115ca6b396cedde498f5edcf7e70ce8d892"
+      url "https://github.com/oktsec/oktsec/releases/download/v0.13.3/oktsec_0.13.3_darwin_amd64.tar.gz"
+      sha256 "8cc64b6bb8f3432b6158412d4719a94769818bde4eca7c2112cd3830fb9ec24d"
 
       define_method(:install) do
         bin.install "oktsec"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oktsec/oktsec/releases/download/v0.13.2/oktsec_0.13.2_darwin_arm64.tar.gz"
-      sha256 "db92ee94d493c18702514c1cdaf1616a8aa9fa6e6c20fe3e9d4065005bcdd113"
+      url "https://github.com/oktsec/oktsec/releases/download/v0.13.3/oktsec_0.13.3_darwin_arm64.tar.gz"
+      sha256 "c8a925c95e3eaec2b49205c09721f37d993b4fafc9063c1df82e00af46aef7e9"
 
       define_method(:install) do
         bin.install "oktsec"
@@ -29,15 +29,15 @@ class Oktsec < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oktsec/oktsec/releases/download/v0.13.2/oktsec_0.13.2_linux_amd64.tar.gz"
-      sha256 "d0ffedd2920b418082c345b1a4ee06ef6954d350d92e36bc0f151ef326d1a808"
+      url "https://github.com/oktsec/oktsec/releases/download/v0.13.3/oktsec_0.13.3_linux_amd64.tar.gz"
+      sha256 "e085e02df15d682571befa5cbefa69b6f3a59981fef39e7efc273453c4805bb9"
       define_method(:install) do
         bin.install "oktsec"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oktsec/oktsec/releases/download/v0.13.2/oktsec_0.13.2_linux_arm64.tar.gz"
-      sha256 "82b6b3c645205dfce2fdb6279c0e0d9a0cd6fddabaa2b124399b18571c73870e"
+      url "https://github.com/oktsec/oktsec/releases/download/v0.13.3/oktsec_0.13.3_linux_arm64.tar.gz"
+      sha256 "c53d6ad97e4c6fad4f8ed5684f6c5b6ba2aece5d3258fc0580156abe4603fd28"
       define_method(:install) do
         bin.install "oktsec"
       end
